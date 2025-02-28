@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag simple-html-page:$(date +%s)
     - name: Run docker container
-      run: docker run -d -p 80:80 simple-html-page
+      run: docker run -d -p 80:80 simple-html-page:$(date +%s)
